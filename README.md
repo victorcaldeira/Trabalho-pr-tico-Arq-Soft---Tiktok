@@ -48,3 +48,59 @@ Localização e distribuição geográfica: Como uma plataforma global, o TikTok
 
 Manutenção e atualização contínua: Com o crescimento e a evolução do TikTok, é essencial que a arquitetura seja facilmente mantida e atualizada para incorporar novos recursos, corrigir bugs e lidar com mudanças nas demandas dos usuários.
 
+
+
+Arquitura do Sistema:
+
+Aplicativos Móveis (iOS e Android):
+O TikTok é acessado principalmente por meio de aplicativos móveis nativos que oferecem funcionalidades de gravação de vídeo, edição, navegação e interação com outros usuários.
+
+Arquitetura Nativa de Aplicativos: Os aplicativos móveis são desenvolvidos nativamente para iOS e Android, utilizando linguagens como Swift para iOS e Kotlin/Java para Android.
+Servidores de Backend:
+Responsáveis pelo processamento de dados, gerenciamento de usuários, autenticação, recomendação de conteúdo e outras operações de back-end.
+
+Arquitetura de Microserviços: O TikTok adotou uma arquitetura de microserviços para modularizar e escalar diferentes partes do sistema de forma independente.
+Armazenamento de Dados:
+O TikTok lida com enormes volumes de vídeos, metadados de usuário, informações de interação e outras informações.
+
+Bancos de Dados Distribuídos: Utiliza sistemas de armazenamento escaláveis e de alta disponibilidade, como bancos de dados distribuídos (ex: Cassandra, MongoDB).
+Sistemas de Arquivos Distribuídos: Para armazenar e acessar vídeos e outros arquivos de mídia.
+Algoritmos de Recomendação:
+Para personalizar a experiência do usuário, o TikTok emprega algoritmos sofisticados de recomendação que analisam o comportamento do usuário, preferências e tendências de conteúdo.
+
+Big Data e Processamento em Tempo Real: Utiliza tecnologias como Apache Spark e Kafka para processar grandes volumes de dados e realizar análises em tempo real.
+Rede de Distribuição de Conteúdo (CDN):
+Para garantir uma entrega rápida e confiável de vídeos aos usuários em todo o mundo.
+
+CDNs Globais: Utiliza CDNs globais para armazenar em cache e distribuir conteúdo de forma eficiente.
+
+Serviços de Segurança:
+Criptografia e Autenticação:
+Utiliza técnicas avançadas de criptografia e autenticação para garantir a segurança dos dados do usuário.
+Criptografia de Dados em Repouso e em Trânsito: Utiliza algoritmos de criptografia robustos para proteger os dados armazenados nos servidores (em repouso) e durante a transmissão entre o cliente e o servidor (em trânsito). Isso pode incluir algoritmos como AES (Advanced Encryption Standard) para criptografia simétrica e RSA (Rivest-Shamir-Adleman) para criptografia assimétrica.
+Mecanismos de Autenticação Segura: Implementa mecanismos de autenticação segura, como OAuth 2.0, para garantir que apenas usuários autorizados tenham acesso aos dados e funcionalidades do TikTok. Isso ajuda a prevenir acesso não autorizado e proteger a privacidade dos usuários.
+Gestão de Chaves Criptográficas: Gerencia de forma segura as chaves criptográficas utilizadas para criptografar e descriptografar os dados, garantindo que apenas usuários autorizados possam acessar as informações protegidas.
+Medidas de Segurança Adicionais:
+Implementa outras medidas de segurança para proteger dados do usuário, prevenir spam, moderar conteúdo e detectar atividades maliciosas.
+Firewalls e Sistemas de Detecção de Intrusão (IDS): Utiliza firewalls e sistemas de detecção de intrusão para proteger os servidores contra ataques externos e atividades maliciosas.
+Filtros de Spam e Moderação de Conteúdo: Implementa filtros de spam e técnicas de moderação de conteúdo para identificar e remover conteúdo inapropriado, protegendo os usuários de experiências negativas na plataforma.
+Análise de Comportamento e Detecção de Anomalias: Utiliza técnicas de análise de comportamento e detecção de anomalias para identificar atividades suspeitas, como contas falsas, comportamento de spam ou tentativas de violação de segurança.
+Requisitos Importantes:
+Escalabilidade:
+Arquitetura altamente escalável que pode dimensionar horizontalmente para lidar com a carga.
+Desempenho:
+Plataforma otimizada para proporcionar uma experiência de usuário fluida.
+Personalização:
+Capacidade de personalizar a experiência do usuário com base em seus interesses e comportamentos.
+Segurança e Privacidade:
+Medidas para proteger os usuários de exploração, spam e outros abusos.
+Decisões de Projeto:
+Microserviços: Modularização e escalabilidade com arquitetura de microserviços.
+Uso de Cloud Computing: Utilização de serviços em nuvem para escalabilidade dinâmica e disponibilidade.
+Tecnologias de Big Data: Utilização de tecnologias de Big Data para processamento de dados.
+Machine Learning e IA: Investimento em algoritmos de aprendizado de máquina e inteligência artificial.
+Histórico de Mudanças:
+Expansão Global: Adaptação da arquitetura para lidar com aumento na diversidade de conteúdo e idiomas.
+Melhorias de Desempenho: Otimização contínua do desempenho do sistema.
+Ênfase na Segurança: Fortalecimento das medidas de segurança ao longo do tempo.
+Integração de Novas Tecnologias: Avaliação e integração de novas tecnologias para aprimorar a arquitetura.
